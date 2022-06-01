@@ -17,7 +17,7 @@ function Header({ pokemons, onSearch, fetchPokemonsPorTipo, fetchPokemonsFav }) 
                 alt="Logo de PokeApi" 
             /></a>
             <div className='header-favoritos'>
-                ❤ {pokemonFavoritos.length}
+            ❤️️ {pokemonFavoritos.length}
             </div>
             <Searchbar onSearch={onSearch} pokemons={pokemons}/>
             <Tipos fetchPokemonsPorTipo={fetchPokemonsPorTipo} fetchPokemonsFav={fetchPokemonsFav} />

@@ -103,7 +103,15 @@ function Pokemon({ pokemon }) {
             <button className={pokemonShinys.includes(pokemon.species.name) ? 'pokemon-shiny shiny-activo' : 'pokemon-shiny'} onClick={botonShiny}><img src={pokemonShinys.includes(pokemon.species.name) ? require("../imagenes/shiny-icon-active.png") : require("../imagenes/shiny-icon.png")} alt="Icono Pokémon Shiny" /></button>
             <div className='pokemon-img' onClick={manejarModal}><img src={pokemonShinys.includes(pokemon.species.name) ? pokemon.sprites.other.home.front_shiny : pokemon.sprites.other.home.front_default} alt={pokemon.species.name} /></div>
             <span className='pokemon-index'>N.º{contarCaracteres(pokemon.id)}{pokemon.id}</span>
-            <button onClick={clicarFav} className={pokemonFavoritos.includes(pokemon.species.url.replace('-species','')) ? 'pokemon-fav pokemon-fav-activo' : 'pokemon-fav'}>❤</button>
+            {/* <button onClick={clicarFav} className={pokemonFavoritos.includes(pokemon.species.url.replace('-species','')) ? 'pokemon-fav pokemon-fav-activo' : 'pokemon-fav'}>❤</button> */}
+            <button onClick={clicarFav} className='pokemon-fav'>
+                {
+                    pokemonFavoritos.includes(pokemon.species.url.replace('-species','')) ?
+                    <span>❤️</span>
+                    :
+                    <span>🖤</span>
+                }
+            </button>
             <h2 className='pokemon-nombre'>{pokemon.species.name}</h2>
             <div className='pokemon-tipos'>
                 {pokemon.types.map((tipo,pos) => {
