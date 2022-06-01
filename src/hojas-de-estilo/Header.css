@@ -1,0 +1,100 @@
+#header{
+    min-height: 100px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5em;
+    grid-template-areas:". logo fav"
+                        "searchbar searchbar searchbar"
+                        "tipos tipos tipos";
+    padding: 1em;
+}
+
+@media only screen and (max-width:575px){
+    #header{
+        grid-template-columns: 1fr;
+        grid-template-areas:"logo"
+                            "fav"
+                            "searchbar"
+                            "tipos";
+    }
+
+    .header-favoritos{
+        margin: 0 auto;
+    }
+  }
+
+.header-logo{
+    grid-area: logo;
+    width: 160px;
+}
+
+.header-favoritos{
+    grid-area: fav;
+    margin-left: auto;
+    color: red;
+    font-size: 2em;
+    -webkit-text-stroke: 2px var(--negro);
+}
+
+.searchbar-container{
+    grid-area: searchbar;
+    display: flex;
+}
+
+.searchbar input{
+    padding: .5em;
+    border-radius: 5px 0 0 5px;
+    border: solid 1px var(--negro);
+}
+
+.searchbar input:focus{
+    outline: none;
+}
+
+.searchbar-boton button{
+    padding: .5em;
+    border-radius: 0 5px 5px 0;
+    border: solid 1px var(--negro);
+    background-color: var(--negro);
+    color: var(--blanco);
+    transition: all 300ms ease-in-out;
+}
+
+.searchbar-boton button:hover{
+    background-color: black
+}
+
+.tipos-container{
+    grid-area: tipos;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.tipos-container button{
+    padding: .5em 2em;
+    border-radius: 50px;
+    text-transform: capitalize;
+    color: var(--blanco);
+    border: none;
+    box-shadow:0px 0px 0px 0px var(--negro);
+    transform: scale(1);
+    transition: all 300ms ease-in-out;
+}
+
+.tipos-container button:hover{
+    padding: .5em 2em;
+    border-radius: 50px;
+    text-transform: capitalize;
+    color: var(--blanco);
+    border: none;
+    box-shadow:0px 0px 10px 0px var(--negro);
+    transform: scale(0.95);
+}
+
+.boton-fav{
+    background-color: goldenrod;
+}

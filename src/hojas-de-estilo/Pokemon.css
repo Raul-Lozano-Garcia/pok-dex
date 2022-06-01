@@ -1,0 +1,406 @@
+/* CLASES COLORES POR TIPO */
+.steel{
+    background-color: #598ea2;
+}
+
+.water{
+    background-color: #4e91d6;
+}
+
+.bug{
+    background-color: #92c12a;
+}
+
+.dragon{
+    background-color: #036dc3;
+}
+
+.electric{
+    background-color: #f4d339;
+}
+
+.ghost{
+    background-color: #5169ad;
+}
+
+.fire{
+    background-color: #fe9d53;
+}
+
+.fairy{
+    background-color: #ec90e7;
+}
+
+.ice{
+    background-color: #74cfc0;
+}
+
+.fighting{
+    background-color: #ce3e6a;
+}
+
+.normal{
+    background-color: #929aa2;
+}
+
+.grass{
+    background-color: #62bc5a;
+}
+
+.psychic{
+    background-color: #f97279;
+}
+
+.rock{
+    background-color: #c6b88c;
+}
+
+.dark{
+    background-color: #5a5265;
+}
+
+.ground{
+    background-color: #d97942;
+}
+
+.poison{
+    background-color: #aa6ac9;
+}
+
+.flying{
+    background-color: #8fa9df;
+}
+
+/* ANIMACIÓN CORAZÓN FAVORITOS */
+@keyframes corazon {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.pokemon-card{
+    width: 300px;
+    height: 300px;
+    display: grid;
+    grid-template-areas:"imgPokemon imgPokemon imgPokemon"
+                        "imgPokemon imgPokemon imgPokemon"
+                        "imgPokemon imgPokemon imgPokemon"
+                        "imgPokemon imgPokemon imgPokemon"
+                        "indexPokemon shinyPokemon favPokemon"
+                        "nombrePokemon nombrePokemon nombrePokemon"
+                        "tiposPokemon tiposPokemon tiposPokemon";
+    
+}
+
+.pokemon-img{
+    grid-area: imgPokemon;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    max-height: 150px;
+    cursor: pointer;
+}
+
+.pokemon-index{
+    grid-area: indexPokemon;
+    color: #a89b91;
+    align-self: center;
+}
+
+.pokemon-shiny{
+    grid-area: shinyPokemon;
+    place-self: center;
+    background-color: #f2f2f2;
+    border-radius: 15px;
+    height: 50px;
+    border: none;
+    padding: .5em;
+}
+
+.shiny-activo{
+    background-color: var(--negro);
+}
+
+.pokemon-fav{
+    grid-area: favPokemon;
+    justify-self: flex-end;
+    font-size: 2em;
+    border: none;
+    background: none;
+    -webkit-text-stroke: 2px var(--negro);
+    transform: scale(1); 
+}
+
+.pokemon-fav:hover{
+    animation: corazon 2s infinite;
+}
+
+.pokemon-fav-activo{
+    color: red;
+}
+
+.pokemon-nombre{
+    grid-area: nombrePokemon;
+    text-transform: capitalize;
+    justify-self: flex-start;
+    font-weight: 400;
+}
+
+.pokemon-tipos{
+    grid-area: tiposPokemon;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.pokemon-tipos div{
+    padding: .5em 2em;
+    border-radius: 50px;
+    text-transform: capitalize;
+    color: var(--blanco);
+}
+
+.pokemon-modal{
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-datos{
+    position: relative;
+    border-radius: 15px;
+    background-color: var(--blanco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    padding: 2em;
+}
+
+.modal-datos button{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: none;
+    background-color: var(--blanco);
+}
+
+.modal-imagen-enlace{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.modal-imagen, .modal-imagen img{
+    max-height: 150px;
+}
+
+.modal-imagen-enlace h2{
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.modal-imagen-enlace a img{
+    max-height: 50px;
+    transform: scale(1);
+    transition: all 300ms ease-in-out;
+}
+
+.modal-imagen-enlace a img:hover{
+    transform: scale(1.1);
+}
+
+.modal-stats h2{
+    border-bottom: 1px solid var(--negro);
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.modal-stats .stat div{
+    margin-bottom: .5em;
+}
+
+@media only screen and (max-width:768px){
+    .modal-datos{
+        flex-direction: column;
+        gap: .75em;
+        margin: 0 .5em;
+    }
+
+    .modal-imagen-enlace{
+        flex-direction: row;
+    }
+  }
+
+@keyframes porcentaje-20 {
+    0%   {
+        width: 0%; 
+    }
+
+    100% {
+        width: 10%;
+    }
+}
+
+@keyframes porcentaje-30 {
+    0%   {
+        width: 0%; 
+    }
+
+    100% {
+        width: 20%;
+    }
+}
+
+@keyframes porcentaje-40 {
+    0%   {
+        width: 0%; 
+    }
+
+    100% {
+        width: 30%;
+    }
+}
+
+@keyframes porcentaje-50 {
+    0%   {
+        width: 0%; 
+    }
+
+    100% {
+        width: 40%;
+    }
+}
+
+@keyframes porcentaje-60 {
+    0%   {
+        width: 0%; 
+    }
+
+    100% {
+        width: 50%;
+    }
+}
+
+@keyframes porcentaje-70 {
+    0%   {
+        width: 0%; 
+    }
+
+    100% {
+        width: 60%;
+    }
+}
+
+@keyframes porcentaje-80 {
+    0%   {
+        width: 0%; 
+    }
+
+    100% {
+        width: 70%;
+    }
+}
+
+@keyframes porcentaje-90 {
+    0%   {
+        width: 0%; 
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+@keyframes porcentaje-100 {
+    0%   {
+        width: 0%; 
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes porcentaje-mas100 {
+    0%   {
+        width: 0%; 
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.barra{
+    width: 0%;
+    height: 8px;
+    border-radius: 50px;
+    background-color: red;
+}
+
+.barra-20{
+    animation: porcentaje-20 ease-in-out .5s forwards;
+}
+
+.barra-30{
+    animation: porcentaje-30 ease-in-out .5s forwards;
+}
+
+.barra-40{
+    animation: porcentaje-40 ease-in-out .5s forwards;
+    background-color: orange;
+}
+
+.barra-50{
+    animation: porcentaje-50 ease-in-out .5s forwards;
+    background-color: orange;
+}
+
+.barra-60{
+    animation: porcentaje-60 ease-in-out .5s forwards;
+    background-color: orange;
+}
+
+.barra-70{
+    animation: porcentaje-70 ease-in-out .5s forwards;
+    background-color: yellow;
+}
+
+.barra-80{
+    animation: porcentaje-80 ease-in-out .5s forwards;
+    background-color: yellow;
+}
+
+.barra-90{
+    animation: porcentaje-90 ease-in-out .5s forwards;
+    background-color: yellow;
+}
+
+.barra-100{
+    animation: porcentaje-100 ease-in-out .5s forwards;
+    background-color: green;
+}
+
+.barra-mas100{
+    animation: porcentaje-mas100 ease-in-out .5s forwards;
+    background-color: green;
+}
