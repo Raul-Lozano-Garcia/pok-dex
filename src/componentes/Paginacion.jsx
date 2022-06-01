@@ -21,11 +21,11 @@ function Paginacion({ onLeftClick, onRightClick, pagina, paginasTotales,setPage 
         <div className='paginacion-container'>
             <div className='paginacion-paginas'>
                 { pagina > 1 &&
-                <button onClick={onLeftClick}>⬅</button>
+                <button onClick={onLeftClick}>⇦</button>
                 }
                 <div>{pagina} de {paginasTotales}</div>
                 { pagina < paginasTotales &&
-                <button onClick={onRightClick}>➡</button>
+                <button onClick={onRightClick}>⇨</button>
                 }
             </div>
             <div className='paginacion-busqueda'>
