@@ -6,7 +6,7 @@ import { getTipos } from "../api";
 
 function Tipos({ fetchPokemonsPorTipo, fetchPokemonsFav }) {
 
-    const { pokemonFavoritos, actualizarPokemonFavoritos } = useContext(FavoritosContext);
+    const { pokemonFavoritos } = useContext(FavoritosContext);
     const { nombreTraducido } = useContext(TraducirContext);
 
     const [tipos, setTipos] = useState([]);
