@@ -46,6 +46,7 @@ function Searchbar({ onSearch,pokemons }) {
         <div className='searchbar-container'>
             <div className='searchbar'>
                 <input type="search" list="data" onChange={onChange} />
+                { search.length > 0 &&
                 <datalist id="data">
                     {todosPokemons.map((pokemon) => {
                         return(
@@ -53,6 +54,7 @@ function Searchbar({ onSearch,pokemons }) {
                         )
                     })}
                 </datalist>
+                }
             </div>
             <div className='searchbar-boton'>
                 <button onClick={onClick}>🔎</button>
