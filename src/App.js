@@ -173,6 +173,7 @@ function App() {
 
     const fetchPokemonsPorTipo = async (tipo) =>{
       try {
+        setSinResultados(false);
         setBuscando(true);
         setLoading(true)
         const data = await searchPokemonPorTipo(tipo);
@@ -185,9 +186,7 @@ function App() {
         setPokemons(results);
         setLoading(false);
         setPage(0);
-        setTotal(1);
-        setSinResultados(false);
-        
+        setTotal(1);      
       } catch (error) {
         
       }
@@ -195,6 +194,7 @@ function App() {
 
     const fetchPokemonsFav = async () =>{
       try {
+        setSinResultados(false);
         setBuscando(true);
         setLoading(true)
         const promises = favoritos.map( async (cadaUno) => {
@@ -207,7 +207,6 @@ function App() {
         setLoading(false);
         setPage(0);
         setTotal(1);
-        setSinResultados(false);
       } catch (error) {
         
       }
