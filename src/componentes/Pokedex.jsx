@@ -38,7 +38,7 @@ function Pokedex({ loading, pokemons, page, setPage, total, setPokemons }) {
     }
 
     useEffect(() => {
-        setPokemons(pokemons);
+        
     }, [filtro]);
     
     return(
