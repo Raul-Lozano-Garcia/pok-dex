@@ -12,7 +12,6 @@ function Searchbar({ onSearch,pokemons }) {
         try {
           const sacarTodos = await getPokemons();
           const totalPokemon = sacarTodos.count;
-          console.log(totalPokemon);
 
           const data = await getPokemons(totalPokemon, 0);
           const promises = data.results.map( async (pokemon) => {
