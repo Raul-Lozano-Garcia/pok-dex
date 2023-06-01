@@ -5,7 +5,6 @@ import Searchbar from './Searchbar';
 import Tipos from './Tipos';
 
 const { useContext } = React;
-//BORRAR ESTE COMENTARIO
 
 function Header({ pokemons, onSearch, fetchPokemonsPorTipo, fetchPokemonsFav }) {
 
