@@ -19,6 +19,10 @@ function Header({ pokemons, onSearch, fetchPokemonsPorTipo, fetchPokemonsFav }) 
             <div className='header-favoritos'>
             ❤️️ {pokemonFavoritos.length}
             </div>
+            <a className='header-github' href="https://github.com/Raul-Lozano-Garcia/pokedex" target="_blank" rel="noreferrer"><img 
+                src={require("../imagenes/github-logo.png")} 
+                alt="Repositorio de GitHub" 
+            /></a>
             <Searchbar onSearch={onSearch} pokemons={pokemons}/>
             <Tipos fetchPokemonsPorTipo={fetchPokemonsPorTipo} fetchPokemonsFav={fetchPokemonsFav} />
         </header>
