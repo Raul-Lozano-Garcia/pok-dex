@@ -5,6 +5,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5em;
     grid-template-areas:". logo fav"
+                        "github github github"
                         "searchbar searchbar searchbar"
                         "tipos tipos tipos";
     padding: 1em;
@@ -15,6 +16,7 @@
         grid-template-columns: 1fr;
         grid-template-areas:"logo"
                             "fav"
+                            "github"
                             "searchbar"
                             "tipos";
     }
@@ -27,6 +29,11 @@
 .header-logo{
     grid-area: logo;
     width: 160px;
+}
+
+.header-github{
+    grid-area: github;
+    width: 200px;
 }
 
 .header-favoritos{
